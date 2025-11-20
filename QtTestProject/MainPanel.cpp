@@ -203,3 +203,9 @@ void QtTestProject::onActionGetData()
         QMessageBox::information(this, tr("gui.messagebox.info"), decrypteddData);
     }
 }
+
+void QtTestProject::closeEvent(QCloseEvent* event)
+{
+    hide();
+    event->ignore();
+}

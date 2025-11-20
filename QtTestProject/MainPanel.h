@@ -16,6 +16,7 @@
 #include "QApplication.h"
 #include <QDebug>
 #include <QStringList>
+#include <QCloseEvent>
 #include <QtConcurrent/QtConcurrent>
 
 #include "Httplib-0.27.0/httplib.h"
@@ -41,6 +42,9 @@ private slots:
     void onTimerGetProcessTick();
     void onTimerUpdateUITick();
     void showContextMenu(const QPoint& pos);
+
+protected:
+    void closeEvent(QCloseEvent* event) override;
 
 private:
     static void getRunningProcesses(concurrency::concurrent_vector<WindowsHelper::ProcessInfo>& vector);

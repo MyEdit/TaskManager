@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="QtTestProject">
+    <qresource prefix="/QtTestProject">
+        <file>Icons/logo.ico</file>
     </qresource>
 </RCC>
